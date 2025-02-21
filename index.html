@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <style>
         body {
+            margin: 0; /* Remove qualquer margem padrão */
             background: linear-gradient(to bottom, #ffffff, #505A63, #0A1F44);
             background-repeat: no-repeat;
             background-size: 100vw 100vh;
@@ -15,17 +16,39 @@
         h1 {
             background-color: #bfc7d6;
             padding: 10px 20px;
-            margin: 0px;
-            width: 100%;
+            margin: 0; /* Remove qualquer margem padrão */
+            width: 100vw; /* Garante que ocupe toda a largura */
             box-sizing: border-box;
-            position: relative;
+            position: fixed; /* Fixa o título no topo */
+            top: 0; /* Coloca ele no topo da página */
+            left: 0; /* Garante que comece do canto esquerdo */
+            text-align: center;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #bfc7d6; /* Opcional: cor de fundo para destacar */
+            text-align: center;
+            padding: 0,5em;
+        }
+
+        footer a {
+            color: black; /* Cor do link */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+
+        footer a:hover {
+            color: blue; /* Cor do link ao passar o mouse */
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
         }
     </style>
 </head>
 <body>
-    <h1>Transformamos suas ideias em soluções inovadoras!</h1>
+    <h1>Transformamos suas ideias em soluções inovadoras!</h1> 
 </body>
 <footer>
-    Desenvolvido por
+    Desenvolvido por <a href="https://github.com/YanMennella" target="_blank">Yan Mennella</a>.
 </footer>
 </html>
