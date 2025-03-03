@@ -26,6 +26,33 @@
             text-align: center;
         }
 
+        nav {
+            background-color: #333;
+        }
+
+        .menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: left; /* Centraliza o menu na tela */
+        }
+
+        .menu li {
+            margin: 0 20px;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
         h2 {
             padding: 10px;
             margin-top: 20px;
@@ -52,13 +79,13 @@
         bottom: 50px; /* Coloca a logo logo acima do footer */
         width: 100px; /* Ajusta o tamanho da logo */
         height: 100px; /* Mantém proporção */
-}
+        }
 
         footer {
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #bfc7d6; /* Opcional: cor de fundo para destacar */
+            background-color: #333; /* Opcional: cor de fundo para destacar */
             text-align: center;
             padding: 0.5em;
         }
@@ -75,15 +102,22 @@
     </style>
 </head>
 <body>
-    <img src="imagens/android-chrome-192x192.png" alt="logo" class="logo">
     <h1>GLY CORPORATION - SOLUÇÕES TECNOLÓGICAS</h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
     <h2>Transformamos sua idéia em funcionalidade.</h2>
     <main>
         <section id="sobre">
             <h2>Sobre Nós</h2>
             <p>A GLY Corporation é uma empresa inovadora que desenvolve soluções tecnológicas para empresas, estudantes e uso pessoal.</p>
         </section>
-        
+       
         <section id="servicos">
             <h2>Nossos Serviços</h2>
             <p>Desenvolvemos softwares personalizados, aplicativos, sistemas de gestão e soluções para otimizar seu negócio.</p>
@@ -94,6 +128,7 @@
             <p>Entre em contato conosco pelo e-mail <a href="mailto:corporationgly@gmail.com" target="_blank">corporationgly@gmail.com</a> ou pelo nosso <a href="https://www.instagram.com/glycorporation/" target="_blank">Instagram</a>.</p>
         </section>
     </main>
+    <img src="imagens/android-chrome-192x192.png" alt="logo" class="logo">
     <footer>
         Desenvolvido por <a href="https://github.com/YanMennella" target="_blank">Yan Mennella</a>.
     </footer>
