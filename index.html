@@ -7,11 +7,12 @@
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <style>
         body {
-            margin: 0; /* Remove qualquer margem padrão */
+            margin: 0;
             background: linear-gradient(to bottom, #ffffff, #505A63, #0A1F44);
             background-repeat: no-repeat;
             background-size: 100vw 100vh;
-            padding-top: 60px; /* Garante que o conteúdo não fique escondido atrás do h1 */
+            padding-top: 60px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         h1 {
@@ -73,6 +74,46 @@
             text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
         }
 
+        #quem-somos {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #505A63, #0A1F44); /* CORRIGIDO - Agora o fundo tem o gradiente */
+        }
+
+        #quem-somos h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: white; /* CORRIGIDO - O título vai ficar visível no fundo escuro */
+        }
+
+        .ceos {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Espaço entre as fotos */
+        }
+
+        .ceo {
+            text-align: center;
+        }
+
+        .ceo img {
+            width: 150px; /* Define o tamanho da foto */
+            height: 150px; /* Mantém a imagem quadrada */
+            border-radius: 50%; /* Torna a imagem redonda */
+            object-fit: cover; /* Garante que a imagem seja recortada corretamente para a área redonda */
+            margin-bottom: 10px;
+        }
+
+        .ceo h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .ceo p {
+            font-size: 1em;
+            color: #ddd; /* CORRIGIDO - A descrição tem uma cor mais clara para boa legibilidade no fundo escuro */
+        }
+
         .logo {
         position: fixed;
         right: 10px;
@@ -127,6 +168,23 @@
             <h2>Contato</h2>
             <p>Entre em contato conosco pelo e-mail <a href="mailto:corporationgly@gmail.com" target="_blank">corporationgly@gmail.com</a> ou pelo nosso <a href="https://www.instagram.com/glycorporation/" target="_blank">Instagram</a>.</p>
         </section>
+
+        <section id="quem-somos">
+            <h2>Quem Somos Nós</h2>
+            <div class="ceos">
+                <div class="ceo">
+                    <img src="imagens/android-chrome-192x192.png" alt="CEO 1">
+                    <h3>CEO 1</h3>
+                    <p>Descrição breve sobre o CEO 1, sua trajetória e papel na empresa.</p>
+                </div>
+                <div class="ceo">
+                    <img src="imagens/android-chrome-192x192.png" alt="CEO 2">
+                    <h3>CEO 2</h3>
+                    <p>Descrição breve sobre o CEO 2, sua trajetória e papel na empresa.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
     <img src="imagens/android-chrome-192x192.png" alt="logo" class="logo">
     <footer>
