@@ -1,5 +1,49 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 600px) { /* PEQUENAS TELAS */
+
+    h1 {
+        font-size: 1.1em;
+        padding: 8px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .ceos {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ceo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+
+}
+
 @media screen and (min-width: 600px) and (max-width: 768px) { /* CONFIGURAÇÕES PARA CELULAR */
 
     h1 {
