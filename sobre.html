@@ -40,8 +40,16 @@
 
         .logo {
             position: fixed;
-            right: 600px;
-            bottom: 60px;
+            bottom: 80px; /* Define a altura acima do footer */
+            left: 50%;
+            transform: translateX(-50%); /* Garante que a logo fique centralizada */
+            width: 80px;
+            height: 80px;
+            background-image: url("imagens/android-chrome-192x192.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10; /* Garante que a logo fique acima de outros elementos */
         }
 
         footer {
@@ -66,12 +74,19 @@
             Nosso principal objetivo é entregar ao cliente um serviço de qualidade, onde ele
         pode encontrar segurança e praticidade, tudo junto, em um só lugar!
         </section>
+
+        <section>
+            <p>
+                Trabalhamos com desenvolvimento de sites e aplicativos personalizados, e também somos
+            criadores da GlyTec, um sistema para gerenciamento de empresas.
+            </p>
+            
+            <div class="logo">
+                
+            </div>
+        </section>
+
     </main>
-    <p>
-        Trabalhamos com desenvolvimento de sites e aplicativos personalizados, e também somos
-    criadores da GlyTec, um sistema para gerenciamento de empresas.
-    </p>
-    <img src="imagens/android-chrome-192x192.png" alt="Gly Corporation" class="logo">
     <footer>Gly Corporation</footer>
 </body>
 </html>
