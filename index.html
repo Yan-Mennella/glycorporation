@@ -1,208 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLY Corporation</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="media-query-style.css" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="media-query-style.css">
     <style>
-      body {
-        margin: 0;
-        background: linear-gradient(to bottom, #ffffff, #505a63, #060707);
-        background-repeat: no-repeat;
-        background-size: 100vw 100vh;
-        padding-top: 60px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, #ffffff, #505A63, #060707);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+            padding-top: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-      h1 {
-        background-color: #bfc7d6;
-        padding: 10px 20px;
-        margin: 0; /* Remove qualquer margem padrão */
-        width: 100vw; /* Garante que ocupe toda a largura */
-        box-sizing: border-box;
-        position: fixed; /* Fixa o título no topo */
-        top: 0; /* Coloca ele no topo da página */
-        left: 0; /* Garante que comece do canto esquerdo */
-        text-align: center;
-      }
+        h1 {
+            background-color: #bfc7d6;
+            padding: 10px 20px;
+            margin: 0; /* Remove qualquer margem padrão */
+            width: 100vw; /* Garante que ocupe toda a largura */
+            box-sizing: border-box;
+            position: fixed; /* Fixa o título no topo */    
+            top: 0; /* Coloca ele no topo da página */
+            left: 0; /* Garante que comece do canto esquerdo */
+            text-align: center;
+        }
 
-      nav {
-        background-color: #333;
-      }
+        nav {
+            background-color: #333;
+        }
 
-      .menu {
-        list-style-type: none;
-        display: flex;
-        justify-content: left; /* Centraliza o menu na tela */
-      }
+        .menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: left; /* Centraliza o menu na tela */
+        }
 
-      .menu li {
-        margin: 0 20px;
-      }
+        .menu li {
+            margin: 0 20px;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+        }
 
-      .menu a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px 15px;
-        display: block;
-      }
+        .menu a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
 
-      .menu a:hover {
-        background-color: #555;
-        border-radius: 5px;
-      }
+        h2 {
+            padding: 10px;
+            margin-top: 20px;
+        }
 
-      h2 {
-        padding: 10px;
-        margin-top: 20px;
-      }
+        main {
+            padding: 10px 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-      main {
-        padding: 10px 30px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+        section a {
+            color: black; /* Cor do link ao passar o mouse */
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
 
-      section a {
-        color: black; /* Cor do link ao passar o mouse */
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-      }
+        section a:hover {
+            color: blue; /* Cor do link ao passar o mouse */
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
 
-      section a:hover {
-        color: blue; /* Cor do link ao passar o mouse */
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-      }
-
-      #quem-somos {
-        text-align: center;
-        padding: 40px 20px;
-        margin-bottom: 20px;
-        background: linear-gradient(
-          to bottom,
-          #505a63,
-          #0a1f44
-        ); /* CORRIGIDO - 
+        #quem-somos {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #505A63, #0A1F44); /* CORRIGIDO - 
             Agora o fundo tem o gradiente */
-        border-radius: 20px;
-      }
+            border-radius: 20px;
+        }
 
-      #quem-somos h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-        color: white; /* CORRIGIDO - O título vai ficar visível no fundo escuro */
-      }
+        #quem-somos h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: white; /* CORRIGIDO - O título vai ficar visível no fundo escuro */
+        }
 
-      .ceos {
-        display: flex;
-        justify-content: center;
-        gap: 40px; /* Espaço entre as fotos */
-      }
+        .ceos {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Espaço entre as fotos */
+        }
 
-      .ceo {
-        text-align: center;
-      }
+        .ceo {
+            text-align: center;
+        }
 
-      .ceo img {
-        width: 150px; /* Define o tamanho da foto */
-        height: 150px; /* Mantém a imagem quadrada */
-        border-radius: 50%; /* Torna a imagem redonda */
-        object-fit: cover; /* Garante que a imagem seja recortada corretamente para a área redonda */
-        margin-bottom: 10px;
-      }
+        .ceo img {
+            width: 150px; /* Define o tamanho da foto */
+            height: 150px; /* Mantém a imagem quadrada */
+            border-radius: 50%; /* Torna a imagem redonda */
+            object-fit: cover; /* Garante que a imagem seja recortada corretamente para a área redonda */
+            margin-bottom: 10px;
+        }
 
-      .ceo h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
+        .ceo h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-      .ceo p {
-        font-size: 1em;
-        color: #ddd; /* CORRIGIDO - A descrição tem uma cor mais clara para boa legibilidade no fundo escuro */
-      }
+        .ceo p {
+            font-size: 1em;
+            color: #ddd; /* CORRIGIDO - A descrição tem uma cor mais clara para boa legibilidade no fundo escuro */
+        }
 
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #333; /* Opcional: cor de fundo para destacar */
-        text-align: center;
-        padding: 0.5em;
-      }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333; /* Opcional: cor de fundo para destacar */
+            text-align: center;
+            padding: 0.5em;
+        }
 
-      footer a {
-        color: black; /* Cor do link */
-        text-decoration: underline; /* Remove o sublinhado */
-      }
+        footer a {
+            color: black; /* Cor do link */
+            text-decoration: underline; /* Remove o sublinhado */
+        }
 
-      footer a:hover {
-        color: blue; /* Cor do link ao passar o mouse */
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-      }
+        footer a:hover {
+            color: blue; /* Cor do link ao passar o mouse */
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h1>GLY CORPORATION - SOLUÇÕES TECNOLÓGICAS</h1>
     <nav>
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="contatos.html">Contato</a></li>
-      </ul>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contatos.html">Contato</a></li>
+        </ul>
     </nav>
     <h2>Transformamos sua idéia em funcionalidade.</h2>
     <main>
-      <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>
-          A GLY Corporation é uma empresa inovadora que desenvolve soluções
-          tecnológicas para empresas, estudantes e uso pessoal.
-        </p>
-      </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A GLY Corporation é uma empresa inovadora que desenvolve soluções tecnológicas para empresas, estudantes e uso pessoal.</p>
+        </section>
+       
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <p>Desenvolvemos softwares personalizados, aplicativos, sistemas de gestão e soluções para otimizar seu negócio.</p>
+        </section>
 
-      <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <p>
-          Desenvolvemos softwares personalizados, aplicativos, sistemas de
-          gestão e soluções para otimizar seu negócio.
-        </p>
-      </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco pelo e-mail <a href="mailto:corporationgly@gmail.com" target="_blank">corporationgly@gmail.com</a> ou pelo nosso <a href="https://www.instagram.com/glycorporation/" target="_blank">Instagram</a>.</p>
+        </section>
 
-      <section id="contato">
-        <h2>Contato</h2>
-        <p>
-          Entre em contato conosco pelo e-mail
-          <a href="mailto:corporationgly@gmail.com" target="_blank"
-            >corporationgly@gmail.com</a
-          >
-          ou pelo nosso
-          <a href="https://www.instagram.com/glycorporation/" target="_blank"
-            >Instagram</a
-          >.
-        </p>
-      </section>
+        <section id="quem-somos">
+            <h2>Quem Somos Nós</h2>
+            <div class="ceos">
+                <div class="ceo">
+                    <img src="imagens/lucas-ceo.png" alt="Lucas proprietário">
+                    <h3>Lucas Bragagnolo</h3>
+                    <p>Responsável pelo Beck-End da empresa</p>
+                </div>
+                <div class="ceo">
+                    <img src="imagens/yan-ceo.png" alt="Yan proprietário">
+                    <h3>Yan Mennella</h3>
+                    <p>Responsável pelo Front-End da empresa</p>
+                </div>
+            </div>
+        </section>
 
-      <section id="quem-somos">
-        <h2>Quem Somos Nós</h2>
-        <div class="ceos">
-          <div class="ceo">
-            <img src="imagens/lucas-ceo.png" alt="Lucas proprietário" />
-            <h3>Lucas Bragagnolo</h3>
-            <p>Responsável pelo Beck-End da empresa</p>
-          </div>
-          <div class="ceo">
-            <img src="imagens/yan-ceo.png" alt="Yan proprietário" />
-            <h3>Yan Mennella</h3>
-            <p>Responsável pelo Front-End da empresa</p>
-          </div>
-        </div>
-      </section>
+        
     </main>
     <footer>
-      Desenvolvido por
-      <a href="https://github.com/YanMennella" target="_blank">Yan Mennella</a>.
+        Desenvolvido por <a href="https://github.com/YanMennella" target="_blank">Yan Mennella</a>.
     </footer>
-  </body>
+</body>
 </html>
