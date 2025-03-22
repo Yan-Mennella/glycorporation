@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GLY Corporation</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="media-query-style.css" />
     <style>
       body {
         margin: 0;
         background: linear-gradient(to bottom, #ffffff, #cfd3d8);
-        background-repeat: no-repeat;
-        background-size: 100vw 100vh;
         padding-top: 120px;
         font-family: "Arial", sans-serif;
         color: #333;
@@ -31,8 +28,9 @@
       .header-content {
         display: flex;
         align-items: center;
-        padding: 10px 20px;
         justify-content: space-between;
+        padding: 10px 20px;
+        flex-wrap: wrap;
       }
 
       .header-content img {
@@ -40,8 +38,10 @@
       }
 
       .header-title {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: bold;
+        text-align: center;
+        flex: 1;
       }
 
       nav {
@@ -163,11 +163,55 @@
       footer a:hover {
         color: #09448c;
       }
+
+      /* Estilo do botão de menu mobile */
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 28px;
+        background: none;
+        color: white;
+        border: none;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .header-title {
+          text-align: center;
+          margin-top: 10px;
+          font-size: 1em;
+        }
+
+        nav {
+          display: none;
+          flex-direction: column;
+        }
+
+        nav.active {
+          display: flex;
+        }
+
+        .menu {
+          flex-direction: column;
+        }
+
+        .menu li {
+          margin: 10px 0;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <!-- Header com logo -->
     <header>
       <div class="header-content">
         <img
@@ -175,10 +219,10 @@
           alt="GLY Corporation Logo"
         />
         <div class="header-title">GLY CORPORATION - SOLUÇÕES TECNOLÓGICAS</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       </div>
 
-      <!-- Menu de navegação -->
-      <nav>
+      <nav id="menu">
         <ul class="menu">
           <li><a href="#">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
@@ -189,7 +233,6 @@
     </header>
 
     <main>
-      <!-- Seção Sobre Nós -->
       <section id="sobre">
         <h2>Sobre Nós</h2>
         <p>
@@ -198,7 +241,6 @@
         </p>
       </section>
 
-      <!-- Seção de Serviços -->
       <section id="servicos">
         <h2>Nossos Serviços</h2>
         <p>
@@ -207,7 +249,6 @@
         </p>
       </section>
 
-      <!-- Seção de Contato -->
       <section id="contato">
         <h2>Contato</h2>
         <p>
@@ -222,19 +263,14 @@
         </p>
       </section>
 
-      <!-- Seção Quem Somos -->
       <section id="quem-somos">
         <h2>Quem Somos Nós</h2>
-
         <div class="ceos">
-          <!-- Card Lucas -->
           <div class="ceo">
             <img src="imagens/lucas-ceo.png" alt="Lucas proprietário" />
             <h3>Lucas Bragagnolo</h3>
             <p>Responsável pelo Back-End da empresa</p>
           </div>
-
-          <!-- Card Yan -->
           <div class="ceo">
             <img src="imagens/yan-ceo.png" alt="Yan proprietário" />
             <h3>Yan Mennella</h3>
@@ -244,10 +280,15 @@
       </section>
     </main>
 
-    <!-- Rodapé do site -->
     <footer>
       Desenvolvido por
       <a href="https://github.com/YanMennella" target="_blank">Yan Mennella</a>.
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
