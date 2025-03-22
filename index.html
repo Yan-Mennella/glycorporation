@@ -9,33 +9,51 @@
     <style>
       body {
         margin: 0;
-        background: linear-gradient(to bottom, #ffffff, #505a63, #060707);
+        background: linear-gradient(to bottom, #ffffff, #cfd3d8);
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
-        padding-top: 60px;
-        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 120px;
+        font-family: "Arial", sans-serif;
+        color: #333;
       }
 
-      h1 {
-        background-color: #bfc7d6;
+      header {
+        background-color: #4c4c4c;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
         padding: 10px 20px;
-        margin: 0; /* Remove qualquer margem padrão */
-        width: 100vw; /* Garante que ocupe toda a largura */
-        box-sizing: border-box;
-        position: fixed; /* Fixa o título no topo */
-        top: 0; /* Coloca ele no topo da página */
-        left: 0; /* Garante que comece do canto esquerdo */
-        text-align: center;
+        justify-content: space-between;
+      }
+
+      .header-content img {
+        height: 60px;
+      }
+
+      .header-title {
+        font-size: 1.5em;
+        font-weight: bold;
       }
 
       nav {
-        background-color: #333;
+        background-color: #0b56a6;
       }
 
       .menu {
         list-style-type: none;
         display: flex;
-        justify-content: left; /* Centraliza o menu na tela */
+        justify-content: center;
+        margin: 0;
+        padding: 0;
       }
 
       .menu li {
@@ -46,65 +64,62 @@
         color: white;
         text-decoration: none;
         font-size: 18px;
-        padding: 10px 15px;
+        padding: 15px 20px;
         display: block;
       }
 
       .menu a:hover {
-        background-color: #555;
+        background-color: #09448c;
         border-radius: 5px;
       }
 
       h2 {
+        color: #0b56a6;
         padding: 10px;
         margin-top: 20px;
+        text-align: center;
       }
 
       main {
-        padding: 100px 30px 30px 30px;
+        padding: 30px;
         padding-bottom: 80px;
-        font-family: Arial, Helvetica, sans-serif;
       }
 
       section {
         padding: 30px 20px;
-        background-color: #f0f0f0;
+        background-color: #f9f9f9;
         border-radius: 10px;
         margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
       section a {
-        color: black; /* Cor do link ao passar o mouse */
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        color: #0b56a6;
+        text-decoration: underline;
       }
 
       section a:hover {
-        color: blue; /* Cor do link ao passar o mouse */
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        color: #09448c;
       }
 
       #quem-somos {
         text-align: center;
         padding: 40px 20px;
-        background: linear-gradient(
-          to bottom,
-          #505a63,
-          #0a1f44
-        ); /* CORRIGIDO - 
-            Agora o fundo tem o gradiente */
+        background: linear-gradient(to bottom, #4c4c4c, #0b56a6);
         border-radius: 20px;
+        color: white;
       }
 
       #quem-somos h2 {
-        font-size: 2em;
+        color: #ffffff;
         margin-bottom: 20px;
-        color: white; /* CORRIGIDO - O título vai ficar visível no fundo escuro */
       }
 
       .ceos {
         display: flex;
         justify-content: center;
-        gap: 40px; /* Espaço entre as fotos */
+        gap: 40px;
+        flex-wrap: wrap;
       }
 
       .ceo {
@@ -112,11 +127,12 @@
       }
 
       .ceo img {
-        width: 150px; /* Define o tamanho da foto */
-        height: 150px; /* Mantém a imagem quadrada */
-        border-radius: 50%; /* Torna a imagem redonda */
-        object-fit: cover; /* Garante que a imagem seja recortada corretamente para a área redonda */
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
         margin-bottom: 10px;
+        border: 3px solid #0b56a6;
       }
 
       .ceo h3 {
@@ -126,33 +142,40 @@
 
       .ceo p {
         font-size: 1em;
-        color: #ddd; /* CORRIGIDO - A descrição tem uma cor mais clara para boa legibilidade no fundo escuro */
+        color: #e0e0e0;
       }
 
       footer {
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: #333; /* Opcional: cor de fundo para destacar */
+        background-color: #4c4c4c;
+        color: #fff;
         text-align: center;
-        padding: 0.5em;
+        padding: 0.8em;
       }
 
       footer a {
-        color: black; /* Cor do link */
-        text-decoration: underline; /* Remove o sublinhado */
+        color: #0b56a6;
+        text-decoration: underline;
       }
 
       footer a:hover {
-        color: blue; /* Cor do link ao passar o mouse */
-        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        color: #09448c;
       }
     </style>
   </head>
+
   <body>
-    <!-- Inicio do corpo do site -->
+    <!-- Header com logo -->
     <header>
-      <h1>GLY CORPORATION - SOLUÇÕES TECNOLÓGICAS</h1>
+      <div class="header-content">
+        <img
+          src="imagens/GLY Main Logo Transparent bg.svg"
+          alt="GLY Corporation Logo"
+        />
+        <div class="header-title">GLY CORPORATION - SOLUÇÕES TECNOLÓGICAS</div>
+      </div>
 
       <!-- Menu de navegação -->
       <nav>
@@ -163,8 +186,6 @@
           <li><a href="contatos.html">Contato</a></li>
         </ul>
       </nav>
-
-      <h2>Transformamos sua idéia em funcionalidade.</h2>
     </header>
 
     <main>
