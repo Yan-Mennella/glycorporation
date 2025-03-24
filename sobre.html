@@ -1,92 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nós</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
     <style>
-        body {
-            background: black;
-            color: white;
-        }
+      body {
+        background: #000;
+        color: #fff;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        h1 {
-            background-color: rgba(0, 255, 255, 0.509);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 40px;
-            text-align: center;
-        }
+      h1 {
+        background-color: rgba(0, 255, 255, 0.5);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+      }
 
-        main {
-            background-color: cadetblue;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 30px;
-            padding: 15px;
-        }
+      main {
+        background-color: cadetblue;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 24px;
+        padding: 20px;
+        max-width: 900px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      }
 
-        section {
-            background-color: black;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-            padding: 10px;
-        }
+      section {
+        background-color: #000;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 8px;
+      }
 
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bolder;
-            padding: 20px;
-        }
+      p {
+        font-weight: bolder;
+        padding: 10px 0;
+        line-height: 1.5;
+      }
 
-        .logo {
-            position: fixed;
-            bottom: 80px; /* Define a altura acima do footer */
-            left: 50%;
-            transform: translateX(-50%); /* Garante que a logo fique centralizada */
-            width: 80px;
-            height: 80px;
-            background-image: url("imagens/android-chrome-192x192.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: 10; /* Garante que a logo fique acima de outros elementos */
-        }
+      .logo {
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 80px;
+        background-image: url("imagens/android-chrome-192x192.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 10;
+      }
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(135, 207, 235, 0.59);
-            text-align: center;
-            padding: 0.5em;
-        }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(11, 86, 166, 0.8);
+        text-align: center;
+        padding: 1em;
+        font-size: 1em;
+        color: #fff;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+      }
 
+      footer a {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      footer a:hover {
+        color: #fff;
+        text-shadow: 0 0 8px #ffd700;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <h1>GLY CORPORATION</h1>
-    <p>A GLY Corporation é uma empresa inovadora que desenvolve soluções tecnológicas para 
-    empresas, estudantes e uso pessoal.</p>
 
     <main>
-        Fundada em 1° de Setembro de 2024
-        <section>
-            Nosso principal objetivo é entregar ao cliente um serviço de qualidade, onde ele
-        pode encontrar segurança e praticidade, tudo junto, em um só lugar!
-        </section>
+      <p>
+        A GLY Corporation é uma empresa inovadora que desenvolve soluções
+        tecnológicas para empresas, estudantes e uso pessoal.
+      </p>
 
-        <section>
-            <p>
-                Trabalhamos com desenvolvimento de sites e aplicativos personalizados, e também somos
-            criadores da GlyTec, um sistema para gerenciamento de empresas.
-            </p>
-            
-            <div class="logo">
-                
-            </div>
-        </section>
+      <section>
+        <p>Fundada em 1° de Setembro de 2024</p>
+        <p>
+          Nosso principal objetivo é entregar ao cliente um serviço de
+          qualidade, onde ele pode encontrar segurança e praticidade, tudo
+          junto, em um só lugar!
+        </p>
+      </section>
 
+      <section>
+        <p>
+          Trabalhamos com desenvolvimento de sites e aplicativos personalizados.
+          Também somos criadores da GlyTec, um sistema para gerenciamento de
+          empresas.
+        </p>
+      </section>
+
+      <div class="logo"></div>
     </main>
-    <footer>Gly Corporation</footer>
-</body>
+
+    <footer>
+      Desenvolvido pela
+      <a
+        href="http://www.instagram.com/glycorporation/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GLY Corporation
+      </a>
+      &copy; 2025 - Todos os direitos reservados.
+    </footer>
+  </body>
 </html>
