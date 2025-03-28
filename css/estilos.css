@@ -85,8 +85,18 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  section#imagem {
-    
+  #imagem {
+    background-image: url("../imagens/sala-reuniao.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 97%;
+    height: 50vh; /* Faz a seção ocupar toda a altura da tela */
+  }
+
+  #imagem img {
+    width: 90%;
+    height: 90%;
   }
 
   section a {
