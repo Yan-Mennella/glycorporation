@@ -78,6 +78,10 @@ main {
 }
 
 section {
+  width: 100%;
+  max-width: 1200px; /* Define um limite máximo para evitar que o conteúdo fique muito largo em telas grandes */
+  margin: 0 auto; /* Centraliza a section na tela */
+  min-height: 60vh; /* Mantém todas as sections com a mesma altura */
   padding: 30px 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
