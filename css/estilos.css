@@ -87,18 +87,14 @@ section {
 
 #imagem {
   background-image: url("../imagens/sala-reuniao.png");
-  background-size: cover;
+  background-size: contain; /* Mostra a imagem inteira sem cortes */
   background-position: center;
   background-repeat: no-repeat;
   width: 97%;
-  max-width: 1200px;
-  height: 50vh; /* Faz ocupar metade da altura da tela */
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
+  height: 50vh; /* Ajusta para metade da tela */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 #imagem img {
