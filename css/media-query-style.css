@@ -1,88 +1,117 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 600px) { /* PEQUENAS TELAS */
+/* ------------------------------ */
+/* MEDIA QUERIES                  */
+/* ------------------------------ */
 
-    h1 {
-        font-size: 1.1em;
-        padding: 8px;
-    }
+/* Celulares pequenos */
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 140px; /* um pouco mais de espaço no mobile */
+  }
 
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-    }
+  h1 {
+    font-size: 1.1em;
+  }
 
-    .menu li {
-        margin: 5px 0;
-    }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .menu a {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
+  .menu li {
+    margin: 5px 0;
+  }
 
-    h2 {
-        font-size: 1.2em;
-        text-align: center;
-    }
+  .menu a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
 
-    .ceos {
-        flex-direction: column;
-        gap: 15px;
-    }
+  h2 {
+    font-size: 1.2em;
+  }
 
-    .ceo img {
-        width: 90px;
-        height: 90px;
-    }
+  .ceos {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    footer {
-        font-size: 0.7em;
-        padding: 5px;
-    }
+  .ceo img {
+    width: 90px;
+    height: 90px;
+  }
 
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
 }
 
-@media screen and (min-width: 600px) and (max-width: 768px) { /* CONFIGURAÇÕES PARA CELULAR */
+/* Celulares grandes (até tablets pequenos) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  body {
+    padding-top: 150px;
+  }
 
-    h1 {
-        font-size: 1.2em;
-        padding: 10px;
-    }
+  .header-content {
+    padding: 10px 15px;
+  }
 
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
+  h1 {
+    font-size: 1.2em;
+  }
 
-    .menu li {
-        margin: 10px 0;
-    }
+  #imagem {
+    height: 45vh;
+  }
 
-    .ceos {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .ceos {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .ceo img {
-        width: 100px;
-        height: 100px;
-    }
+  .ceo img {
+    width: 110px;
+    height: 110px;
+  }
 
-    footer {
-        font-size: 0.8em;
-    }
+  footer {
+    font-size: 0.9em;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) { /* CONFIGURAÇÃO PARA TABLET */ 
+/* Tablets médios */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    padding-top: 130px;
+  }
 
+  .ceo img {
+    width: 130px;
+    height: 130px;
+  }
 
+  footer {
+    font-size: 1em;
+  }
 }
 
-@media screen and (min-width: 992px) { /* CONFIGURAÇÕES PARA DESKTOP */
+/* Desktop */
+@media screen and (min-width: 992px) {
+  body {
+    padding-top: 120px;
+  }
 
+  main {
+    padding: 40px 60px;
+  }
 
+  .ceo img {
+    width: 150px;
+    height: 150px;
+  }
 }
+
 
 
