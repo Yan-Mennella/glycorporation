@@ -42,6 +42,10 @@
     font-size: 1.2em;
   }
 
+  #imagem {
+    background-position: 55% center; /* Move o foco levemente para a esquerda */
+  }
+
   .ceos {
     flex-direction: column;
     gap: 15px;
@@ -116,6 +120,11 @@
   main {
     padding: 40px 60px;
   }
+
+  #imagem {
+    background-position: center; /* Move o foco levemente para a esquerda */
+  }
+
 
   .ceo img {
     width: 150px;
